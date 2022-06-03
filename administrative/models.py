@@ -41,3 +41,10 @@ class Parent(models.Model):
 
     def __str__(self):
             return self.name
+
+class Finance(models.Model):
+        total_fee = models.IntegerField()
+        class_name = models.ForeignKey(Class, on_delete=models.CASCADE, null=True)
+        
+        def __str__(self):
+            return str(self.class_name)
