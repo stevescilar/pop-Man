@@ -42,10 +42,14 @@ class Parent(models.Model):
     def __str__(self):
             return self.name
 
-class Exam(models.MOdel):
-        student_name = models.ForeignKey(Student,on_delete=models.Cascade, null=True)
-        subject_name = models.ManyToManyField(Subject,on_delete=models.CASCADE,null=True)
+class Exam(models.Model):
+        # student_name = models.ForeignKey(Student, on_delete = models.CASCADE, null=True)
+        # 
+        # subject_name = models.ManyToManyField(Subject,on_delete=models.CASCADE,null=True)
         score = models.IntegerField()
+
+        def __str__(self):
+            return str(self.student_name)
 
 
 class Finance(models.Model):
