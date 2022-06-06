@@ -54,7 +54,8 @@ class Exam(models.Model):
 
 class Finance(models.Model):
         total_fee = models.IntegerField()
-        #finance grouo
+        #finance group
+        # to becontinued
         class_name = models.ForeignKey(Class, on_delete=models.CASCADE, null=True)
         
         def __str__(self):
