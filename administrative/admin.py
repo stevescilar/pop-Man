@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Student,Class,Subject,Finance
+from . models import Student,Class,Subject,Finance,Staff
 # Register your models here.
 
 class FinanceAdmin(admin.ModelAdmin):
@@ -8,3 +8,4 @@ admin.site.register(Student)
 admin.site.register(Class)
 admin.site.register(Subject)
 admin.site.register(Finance,FinanceAdmin)
+admin.site.register(Staff)

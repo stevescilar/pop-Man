@@ -58,3 +58,14 @@ class Finance(models.Model):
         
         def __str__(self):
             return str(self.class_name)
+
+
+class Staff(models.Model):
+        name = models.CharField(max_length=50, blank=True)
+        contact = models.CharField(max_length=12,blank=True)
+        teacher_class = models.ForeignKey(Class, verbose_name=("Class"), on_delete=models.CASCADE,null=True) 
+        created_at = models.DateTimeField(auto_now_add=True,blank=True,null=True)
+        updated_at = models.DateTimeField(auto_now=True,blank=True,null=True)
+
+        def __str__(self):
+            return self.name
